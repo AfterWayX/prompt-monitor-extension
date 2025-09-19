@@ -1,0 +1,157 @@
+/**
+ * Issues Found tab styles
+ */
+
+.issues-tab {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.tab-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-header-content {
+  flex: 1;
+}
+
+.tab-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+.tab-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.issues-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  min-height: 0;
+  max-height: 280px;
+}
+
+.issue-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  contain: layout;
+  will-change: auto;
+}
+
+.issue-card:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.issue-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.issue-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.issue-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #dc2626;
+  color: white;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.issue-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.issue-email {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: #dc2626;
+  word-break: break-all;
+  margin-bottom: 4px;
+}
+
+.issue-timestamp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.issue-status {
+  margin-top: 8px;
+}
+
+.issue-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.tab-footer {
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-note {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-note strong {
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .issue-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .issue-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .tab-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
